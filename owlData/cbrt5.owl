@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tp11501203/owl/"
+     xml:base="http://www.semanticweb.org/tp11501203/owl/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.semanticweb.org/tp11501203/owl/ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tp11501203/owl/">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OntologyOfCBRT</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">1</owl:versionInfo>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CBRT</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#attendsAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#attendsAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#worksAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#broadcasts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#broadcasts">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#outputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#decides -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#decides">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#outputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#has">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#outputs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#outputs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Service"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#produces">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#outputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#worksAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#worksAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#worksIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#BirthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#BirthDate">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#DogumTarihi"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#DogumTarihi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#DogumTarihi">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#FirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#FirstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#IDno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#IDno">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#LastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#LastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#IDinfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/Partner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/Partner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Accounting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Accounting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#AuditComminity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#AuditComminity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Banking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Banking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Banknote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Banknote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Board -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Board">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Branches -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Branches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Comminication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Comminication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#ComminityMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#ComminityMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Corporation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Corporation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Business"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Partnership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Department">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#ExecutiveComminity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#ExecutiveComminity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#GeneralAssembly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#GeneralAssembly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Governor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Governor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#HumanResources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#HumanResources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#IT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#IT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Intern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Intern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Legal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Legal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Logistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Logistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#MPC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#MPC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#MPCdecision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#MPCdecision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#StatisticalBroadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#NonProfit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#NonProfit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Partnership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Partnership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#PaymentSystems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#PaymentSystems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Service"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Product">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Research -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Research">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Service">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#StatisticalBroadcast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#StatisticalBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ontology#Statistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Statistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/AliAlperenColak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/AliAlperenColak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Staff"/>
+        <ontology:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ali</ontology:FirstName>
+        <ontology:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</ontology:Gender>
+        <ontology:IDno rdf:datatype="http://www.w3.org/2001/XMLSchema#short">1</ontology:IDno>
+        <ontology:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colak</ontology:LastName>
+        <ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It Specialist</ontology:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/EmrahSener -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/EmrahSener">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor"/>
+        <ontology:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emrah</ontology:FirstName>
+        <ontology:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</ontology:Gender>
+        <ontology:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sener</ontology:LastName>
+        <ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaskanYardimcisi</ontology:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/ErkanKilimci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/ErkanKilimci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor"/>
+        <ontology:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erkan</ontology:FirstName>
+        <ontology:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</ontology:Gender>
+        <ontology:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilimci</ontology:LastName>
+        <ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaskanYardimcisi</ontology:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/MehmetCan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/MehmetCan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Intern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/MuratCan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/MuratCan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/Partner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/MuratCetinkaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/MuratCetinkaya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#Governor"/>
+        <ontology:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">murat</ontology:FirstName>
+        <ontology:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</ontology:Gender>
+        <ontology:IDno rdf:datatype="http://www.w3.org/2001/XMLSchema#short">0</ontology:IDno>
+        <ontology:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cetinkaya</ontology:LastName>
+        <ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baskan</ontology:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tp11501203/owl/MuratUysal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tp11501203/owl/MuratUysal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor"/>
+        <ontology:FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">murat</ontology:FirstName>
+        <ontology:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</ontology:Gender>
+        <ontology:LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uysal</ontology:LastName>
+        <ontology:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baskanYardimcisi</ontology:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/Partner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#ComminityMember"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Governor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Intern"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Staff"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Accounting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#AuditComminity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Banking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Board"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Branches"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Comminication"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#ExecutiveComminity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#GeneralAssembly"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#HumanResources"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#IT"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Legal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Logistic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#MPC"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#PaymentSystems"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Research"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Statistics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Business"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#NonProfit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Private"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Public"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#ComminityMember"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#DeputyGovernor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Governor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Intern"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Staff"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Organization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Service"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#broadcasts"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#decides"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#produces"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#has"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#outputs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#worksIn"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#BirthDate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#FirstName"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Gender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#IDno"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#LastName"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tp11501203/owl/ontology#Title"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
