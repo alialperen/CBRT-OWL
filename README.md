@@ -1,5 +1,5 @@
 
-#YTU-CE Semantic Web Graduate Course- HW Assignment 3-OWL
+# YTU-CE Semantic Web Graduate Course-HW Assignment 3
 
 	This is a maven project. 
 	To get required libraries for the project please right click-Maven-Update Project...
