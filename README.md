@@ -1,6 +1,7 @@
-# TP-11501203_OWL
-YTU-CE Semantic Web Graduate Course- HW Assignment 3-OWL
-This project is a maven project and requires internet connection. 
+
+#YTU-CE Semantic Web Graduate Course- HW Assignment 3-OWL
+
+	This is a maven project. 
 	To get required libraries for the project please right click-Maven-Update Project...
 	Names of required libraries can be found in depencies tags in pom.xml.
 -src
